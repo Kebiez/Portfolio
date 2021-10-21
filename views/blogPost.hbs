@@ -1,0 +1,18 @@
+<div>
+    <h2>{{blogposts.title}}</h2>
+
+    <img src="/static/TempPic.png" alt="">
+
+    <p>{{blogposts.mainContent}}</p>
+
+    {{#if isLoggedIn}}
+    <a href="/blogPost/{{blogposts.id}}/editBlog" class="btn">Edit</a>
+    <a href="/blogPost/{{blogposts.id}}/blogDelete" class="btn">Delete</a>
+    {{/if}}
+    <a href="/blogPost/{{blogposts.id}}/comment" class="btn">Comment</a>
+
+    <div>
+        {{>comment}}
+    </div>
+
+</div>

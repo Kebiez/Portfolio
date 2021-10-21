@@ -1,0 +1,25 @@
+{{#if isLoggedIn}}
+<div id="content">
+    {{#if validationErrors.length}}
+    {{#each validationErrors}}
+    <p>{{this}}</p>
+    {{/each}}
+    {{/if}}
+
+    <form action="/blogPost/{{blogposts.id}}/editBlog" method="POST">
+        <label>Title</label><br>
+        <input type="text" name="title" placeholder={{blogposts.title}}><br>
+        <label>Description</label><br>
+        <input type="text" name="description" placeholder={{blogposts.description}}><br>
+        <label>Main content</label><br>
+        <input type="text" name="mainContent" placeholder={{blogposts.mainContent}}><br>
+        <input type="hidden" name="_csrf" value={{csrfToken}}>
+        <input type="submit" value="Save">
+    </form>
+</div>
+{{else}}
+<div>
+    <h2>You're not logged in!</h2>
+    <p>Please log in to proceed</p>
+</div>
+{{/if}}

@@ -1,0 +1,141 @@
+#content {
+  padding: 0;
+  margin: 0;
+  min-height: calc(100vh - 98px);
+  justify-content: center;
+}
+
+#minNavBar {
+  justify-content: space-between;
+  background: linear-gradient(0, cyan, blue);
+  min-height: 50px;
+}
+
+.navbar {
+  display: block;
+}
+
+#mainBtnColor {
+  color: red;
+}
+
+#mainBtnColor:hover {
+  color: white;
+}
+
+h1 {
+  display: flex;
+  justify-content: center;
+  color: brown;
+}
+
+body {
+  background-color: darkcyan;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+#titel {
+  background-color: darkblue;
+  min-width: 100px;
+  margin-bottom: 0;
+}
+
+#picture {
+  text-align: center;
+}
+
+#topBar {
+  display: block;
+}
+
+#foot {
+  background-color: chartreuse;
+  text-align: center;
+  padding: 0;
+  max-height: 25px;
+  
+}
+
+#madeBy {
+  margin: 0;
+}
+
+#Center {
+ display: flex;
+ justify-content: center;
+}
+
+#cardSettings{
+  min-width: 300px;
+  min-height: 400px;
+  margin: 5px;
+}
+
+#alignProjects{
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  flex-wrap: wrap;
+}
+
+#centerProjects{
+  display: flex;
+  justify-content: center;
+  padding-bottom: 10px;
+}
+
+#alignBlog{
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  padding-bottom: 10px;
+  flex-direction: column;
+  align-items: center;
+}
+
+#textAlign{
+
+  text-align: center;
+  margin-bottom: .5em;
+}
+
+#centerBlog{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+ 
+}
+ 
+#comment{
+  max-width: 300px;
+  max-height: 350px;
+}
+
+#currentBlog{
+  align-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  max-width: 60%;
+}
+
+#currentProject{
+  align-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  max-width: 60%;
+  
+}
+
+#commentSection{
+  background-color: gray;
+  max-width: 40%;
+}
+
+.comments{
+  background-color: aqua;
+  margin-bottom: 5px;
+}

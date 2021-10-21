@@ -1,0 +1,11 @@
+<div id="commentSection">
+    {{#if comments.length}}
+    {{#each comments}}
+    <p class="comments">{{content}}</p>
+    {{/each}}
+    {{#else}}
+    <p>Be the first one to add a comment</p>
+    {{/else}}
+    {{/if}}
+
+</div>

@@ -1,0 +1,25 @@
+<div class="col-8" id="alignBlog">
+    {{#if blogposts.length}}
+    {{#each blogposts}}
+    <div class="card" id="cardSettings">
+        <div class="card-header">
+            <div class="card-title h5">{{title}}</div>
+            <div class="card-subtitle text-gray">{{description}}</div>
+        </div>
+        <div class="card-image">
+            <img src="static/TempPic.png" class="img-responsive">
+        </div>
+
+        <div class="card-footer">
+            <a href="/blogPost/{{id}}" class="btn btn-primary">More</a>
+
+        </div>
+    </div>
+    {{/each}}
+    {{#else}}
+    <p>Finns inga posts just nu</p>
+    {{/else}}
+    {{/if}}
+
+
+</div>

@@ -1,0 +1,27 @@
+<div class="col-4" id="centerProjects">
+
+    {{#if projectposts.length}}
+    {{#each projectposts}}
+    <div class="card" id="cardSettings">
+        <div class="card-header">
+            <div class="card-title h5">{{title}}</div>
+            <div class="card-subtitle text-gray">{{description}}</div>
+        </div>
+        <div class="card-image">
+            <img src="static/TempPic.png" class="img-responsive">
+        </div>
+        <div class="card-body">
+            {{mainContent}}
+        </div>
+        <div class="card-footer">
+            <a href="/projectPost/{{id}}" class="btn btn-primary">More</a>
+        </div>
+    </div>
+    {{/each}}
+    {{#else}}
+    <p>There is no finished projects yet</p>
+    {{/else}}
+    {{/if}}
+
+
+</div>

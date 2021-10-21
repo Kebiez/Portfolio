@@ -1,0 +1,26 @@
+<div class="columns col-12" id="content">
+    <div class="column col-8">
+
+        {{#if validationErrors.length}}
+        {{#each validationErrors}}
+        <p>{{this}}</p>
+        {{/each}}
+        {{/if}}
+        {{#if isLoggedIn}}
+        <p>you're already logged in</p>
+        <form action="/Logout" method="post">
+            <input type="submit" value="Logout" class="btn">
+            <input type="hidden" name="_csrf" value={{csrfToken}}>
+        </form>
+        {{else}}
+        <form action="/Login" method="post">
+            Username: <input type="username" name="username"><br>
+            Password: <input type="password" name="password"><br>
+            <input type="submit" name="Login" value="Login" class="btn btn-primary">
+            <input type="hidden" name="_csrf" value={{csrfToken}}>
+        </form>
+        {{/if}}
+
+
+    </div>
+</div>

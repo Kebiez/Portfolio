@@ -1,0 +1,17 @@
+<div id="content">
+    <div id="Center">
+        <div>
+            <h3>
+                <b> Here are my projects that I've worked on and are finished. </b>
+            </h3>
+            {{#if isLoggedIn}}
+            <div id="textAlign">
+                <a href="/projects/createProject" class="btn">Create Project</a>
+            </div>
+            {{/if}}
+        </div>
+    </div>
+    <div id="alignProjects">
+        {{>projectCard}}
+    </div>
+</div>

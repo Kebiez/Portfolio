@@ -1,0 +1,13 @@
+<div>
+    <h2>{{projectposts.title}}</h2>
+
+    <img src="/static/TempPic.png" alt="">
+
+    <p>{{projectposts.description}}</p>
+
+    <p>{{projectposts.mainContent}}</p>
+    {{#if isLoggedIn}}
+    <a href="/projectPost/{{projectposts.id}}/editProject" class="btn">Edit</a>
+    <a href="/projectPost/{{projectposts.id}}/projectDelete" class="btn">Delete</a>
+    {{/if}}
+</div>

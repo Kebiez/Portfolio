@@ -1,0 +1,26 @@
+<div id="content" class="columns col-12">
+    <div class="column col-8">
+        <div id="textAlign">
+            <h2>
+                Welcome to my blog side!
+            </h2>
+
+            <p>
+                Please let me know if there is anything you're thinking about my porjects by simply adding a comment
+                on
+                the
+                ongoing project.<br> You add comments by clicking "More" and then add a comment in there.
+            </p>
+            {{#if isLoggedIn}}
+            <a href="/blog/createBlog" class="btn">Create Blog</a>
+            {{/if}}
+        </div>
+
+
+        <div id="centerBlog">
+            {{>blogCard}}
+
+        </div>
+
+    </div>
+</div>

@@ -1,0 +1,20 @@
+<div class="navbar">
+    <div>
+        <h1 id="titel">
+            My Portfolio
+        </h1>
+    </div>
+    <section class="navbar-section" id="minNavBar">
+        <a href="/" class="navbar-brand mr-2" id="mainBtnColor"> <b> Home </b> </a>
+        <a href="/about" class="btn btn-link" id="mainBtnColor"> <b> About </b> </a>
+        <a href="/contact" class="btn btn-link" id="mainBtnColor"> <b> Contact </b> </a>
+        <a href="/projects" class="btn btn-link" id="mainBtnColor"> <b> Projects </b> </a>
+        <a href="/blog" class="btn btn-link" id="mainBtnColor"> <b> Blogs </b> </a>
+        {{#if isLoggedIn}}
+        <a href="/login" class="btn btn-link" id="mainBtnColor"> <b> Logout </b></a>
+        {{else}}
+        <a href="/login" class="btn btn-link" id="mainBtnColor"> <b> Login </b> </a>
+        {{/if}}
+
+    </section>
+</div>
