@@ -649,17 +649,13 @@ app.post('/blogPost/:id/comment', function (request, response) {
             if (error) {
                 response.render("internalServerError.hbs")
             } else {
-                if (comments == undefined) {
-                    return response.render("pageNotFound.hbs")
-                }
                 response.redirect("/blogPost/" + blogID)
             }
         })
     } else {
         const model = {
             validationErrors,
-            blogID,
-
+            blogID
         }
         response.render("writeComment.hbs", model)
     }
