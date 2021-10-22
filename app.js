@@ -402,13 +402,10 @@ app.post('/projectPost/:id/projectDelete', csrfProtection, function (request, re
 
         const value = [id]
 
-        db.all(query, value, function (error, projectposts) {
+        db.all(query, value, function (error) {
             if (error) {
                 response.render("internalServerError.hbs")
             } else {
-                if (projectposts == undefined) {
-                    return response.render("pageNotFound.hbs")
-                }
                 response.redirect("/projects")
             }
         })
@@ -605,13 +602,11 @@ app.post('/blogPost/:id/blogDelete', csrfProtection, function (request, response
         const value = [id]
 
         db.all(queryCom, value, function (error, comments) {
-            db.run(query, value, function (error, blogposts) {
+            db.run(query, value, function (error) {
                 if (error) {
                     response.render("internalServerError.hbs")
                 } else {
-                    if (blogposts == undefined) {
-                        return response.render("pageNotFound.hbs")
-                    }
+
                     response.redirect("/blog")
                 }
             })
@@ -649,13 +644,17 @@ app.post('/blogPost/:id/comment', function (request, response) {
             if (error) {
                 response.render("internalServerError.hbs")
             } else {
+                if (comments == undefined) {
+                    return response.render("pageNotFound.hbs")
+                }
                 response.redirect("/blogPost/" + blogID)
             }
         })
     } else {
         const model = {
             validationErrors,
-            blogID
+            blogID,
+
         }
         response.render("writeComment.hbs", model)
     }
